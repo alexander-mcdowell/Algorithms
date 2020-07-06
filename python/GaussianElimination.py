@@ -12,9 +12,9 @@ def getPivot(matrix):
             if (matrix[i][j] == 0) or (not np.all(a == 0)): 
                 count += 1
                 if matrix[i][j] != 0 and k == -1: k = j
-            if count == len(matrix[i]): 
-                if k == -1: return None
-                return (i, k)
+        if count == len(matrix[i]): 
+            if k == -1: return None
+            return (i, k)
 
 def GaussianElimination(matrix):
     reduced = np.copy(matrix)
