@@ -153,6 +153,18 @@ public class Matrix {
         return product;
     }
 
+    // Multiplication by a vector
+    public double[] multiply(double[] b) {
+        if (b.length != m) System.err.println("The length of b must equal the number of columns for multiplication.");
+        double product[] = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            product[i] = dot(elements[i], b);
+        }
+
+        return product;
+    }
+
     @Override
     public String toString() {
         String out = "[";
