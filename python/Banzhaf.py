@@ -15,12 +15,6 @@ import operator
     # 3 cont. For example, coalition (B, C) does not pass the threshold, but (A, B, C) does. Thus, increment A's winning counter.
     # 4. The Banzhaf index of the winner is thus the winning counter divided by the coalitions tested.
 
-def findSubsets(s):
-    subsets = []
-    for length in range(0, len(s)):
-        subsets += list(set(itertools.combinations(s, length)))
-    return subsets
-
 def randomSubset(set):
     subsets = []
     for m in set:
