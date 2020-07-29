@@ -109,6 +109,7 @@ struct linked_list pop(struct linked_list* list_address, int index) {
 int main(int argc, char *argv[]) {
     struct linked_list* root = (struct linked_list*) malloc(sizeof(struct linked_list));
     root->value = 0;
+    root->next = NULL;
     int values[] = {1, 2, 3, 4};
     pushVal(root, 10);
     print(root);

@@ -141,7 +141,7 @@ class Graph():
                 if n in left_over:
                     left_over.remove(n)
         return path
-    # Greedy Search
+    # NOTE: This method doesn't always work. TODO: FIX!
     def GS(self, start, end, visited = [], total_weight = 0):
         if start not in visited:
             visited.append(start)
@@ -163,6 +163,7 @@ class Graph():
         min_weight = min(w)
         total_weight += min_weight
         next = self.adjList[start][v[w.index(min_weight)]]
+        print(visited)
         total_weight, path = self.GS(next, end, visited, total_weight)
         return total_weight, path
     # Dijkstra's Algorithm
@@ -266,7 +267,7 @@ if __name__ == '__main__':
         print(str(k[0]) + ": " + str(list))
     print("-"*50)
     start = tree.vertices[0]
-    end = tree.vertices[-1]
+    end = tree.vertices[4]
     print("Shortest path from " + str(start) + " to " + str(end) + ": " + str(tree.GS(start, end, visited = [])[1]))
     print("The above path has a distance of " + str(end[1]))
     print("-"*50)

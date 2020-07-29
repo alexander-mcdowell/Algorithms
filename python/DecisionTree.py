@@ -128,7 +128,7 @@ classes = [0, 1]
 # Training: k-fold cross-validation with k = 5
 best_accuracy = 0
 k_max = 5
-iterations = 1
+iterations = 2
 best_trees = {}
 for iteration in range(iterations):
     for k in range(2, k_max + 1):

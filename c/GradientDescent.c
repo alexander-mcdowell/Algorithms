@@ -24,7 +24,7 @@ double gradientDescent(double dx, double guess, double error) {
         step = f(x + dx) - f(x);
         x_new = x - step;
         if (fabs(x_new - x) < error) return x_new;
-        x_new = x;
+        x = x_new;
         steps += 1;
     }
 
